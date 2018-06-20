@@ -8,7 +8,7 @@ import { GamesLibraryModule } from './+games-library/games-library.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
