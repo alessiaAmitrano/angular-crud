@@ -8,13 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LibraryService {
   url = 'http://localhost:3000/data';
-  // source = 'films'
 
   constructor(private http: HttpClient) { }
 
   getLibrary(): any {
     // this.http.get(`${this.url}/${this.source}`).subscribe(res => console.log('res', res));
-    this.http.get(this.url).subscribe(res => console.log('res', res));
+   return this.http.get(this.url).subscribe(res => console.log('res', res));
   }
 
 }

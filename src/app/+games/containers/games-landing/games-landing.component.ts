@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { LibraryService } from '../../../core/services/library.service';
 
 @Component({
-  selector: 'app-games-library-landing',
-  templateUrl: './games-library-landing.component.html',
-  styleUrls: ['./games-library-landing.component.scss']
+  selector: 'app-games-landing',
+  templateUrl: './games-landing.component.html',
+  styleUrls: ['./games-landing.component.scss']
 })
-export class GamesLibraryLandingComponent implements OnInit {
+export class GamesLandingComponent implements OnInit {
 
   constructor(private libraryService: LibraryService) { }
 
