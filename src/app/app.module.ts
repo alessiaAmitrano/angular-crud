@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { GamesLibraryModule } from './+games-library/games-library.module';
+import { LibraryService } from './core/services/library.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,6 @@ import { GamesLibraryModule } from './+games-library/games-library.module';
     GamesLibraryModule,
     CoreModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
