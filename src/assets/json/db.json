@@ -1,5 +1,5 @@
 {
-    "films": [
+    "games": [
         {
             "name": "Dragon s Lair",
             "year": 1983,
@@ -29,7 +29,9 @@
             "name": "Tetris",
             "year": "1984",
             "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/NES_Tetris_Box_Front.jpg/220px-NES_Tetris_Box_Front.jpg"
-        },
+        }
+    ],
+    "films": [
         {
             "name": "Avatar",
             "year": 2009,
