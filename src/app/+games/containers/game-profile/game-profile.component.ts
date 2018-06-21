@@ -4,6 +4,7 @@ import { switchMap } from 'rxjs/operators';
 import { Game } from 'core/models/game';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { GamesService } from 'core/services/games.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-game-profile',
@@ -15,6 +16,7 @@ export class GameProfileComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private location: Location,
     private gameApi: GamesService) { }
 
   ngOnInit() {
@@ -26,6 +28,10 @@ export class GameProfileComponent implements OnInit {
 
   goToList() {
     this.router.navigate(['/games']);
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }
