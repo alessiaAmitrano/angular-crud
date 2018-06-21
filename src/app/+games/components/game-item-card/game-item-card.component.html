@@ -1,7 +1,5 @@
 <div class="card col" (click)="cardClicked.emit(gameItem.id)">
-  <img class="card-img-top"
-       [src]="gameItem.image"
-       alt="Card image">
+  <app-image [imgUrl]="gameItem.image"></app-image>
   <div class="card-body">
     <h4 class="card-title">{{gameItem.name}}</h4>
     <p class="card-text">{{gameItem.id}}</p>
