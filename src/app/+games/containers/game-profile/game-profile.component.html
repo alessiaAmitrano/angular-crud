@@ -1,3 +1,11 @@
-<pre>
-  {{gameProfile$ | async | json}}
-</pre>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="(gameProfile$ | async)?.image" *ngIf="gameProfile$" />
+    </div>
+    <div class="col-md-6">
+      <h1>{{(gameProfile$ | async)?.name}}</h1>
+      <h3>{{(gameProfile$ | async)?.year}}</h3>
+    </div>
+  </div>
+</div>
