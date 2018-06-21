@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { GamesService } from 'core/services/games.service';
+import { Component, OnInit } from '@angular/core';
 import { Game } from 'core/models/game';
-import { Subscription, Observable } from 'rxjs';
+import { GamesService } from 'core/services/games.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-games-list',
@@ -13,6 +13,6 @@ export class GamesListComponent implements OnInit {
   constructor(private gameApi: GamesService) { }
 
   ngOnInit() {
-      this.gamesList$ = this.gameApi.getGameList();
+    this.gamesList$ = this.gameApi.getGameList();
   }
 }
