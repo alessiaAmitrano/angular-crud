@@ -2,8 +2,8 @@
 
 <div class="container">
     <div class="row">
-        <div *ngFor="let game of gamesList$ | async"
-             class="card col"
+        <div *ngFor="let game of gamesList$ | async" (click)="goToDetail(game.id)"
+             class="card col col-md-3"
              style="width:400px">
             <img class="card-img-top"
                  [src]="game.image"
