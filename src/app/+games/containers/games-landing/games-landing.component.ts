@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LibraryService } from '../../../core/services/library.service';
 
 @Component({
   selector: 'app-games-landing',
@@ -8,10 +7,9 @@ import { LibraryService } from '../../../core/services/library.service';
 })
 export class GamesLandingComponent implements OnInit {
 
-  constructor(private libraryService: LibraryService) { }
 
-  ngOnInit() {
-    this.libraryService.getLibrary();
-  }
+  constructor() { }
+
+  ngOnInit() {}
 
 }
