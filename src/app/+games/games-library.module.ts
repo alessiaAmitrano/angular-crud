@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GamesLibraryLandingComponent } from './containers/games-library-landing/games-library-landing.component';
+import { GamesLandingComponent } from './containers/games-landing/games-landing.component';
 import { GamesLibraryRoutingModule } from './games-library-routing.module';
 
 @NgModule({
@@ -8,7 +8,7 @@ import { GamesLibraryRoutingModule } from './games-library-routing.module';
     CommonModule,
     GamesLibraryRoutingModule
   ],
-  declarations: [GamesLibraryLandingComponent],
-  exports: [GamesLibraryLandingComponent]
+  declarations: [GamesLandingComponent],
+  exports: [GamesLandingComponent]
 })
 export class GamesLibraryModule { }
