@@ -8,20 +8,11 @@ import { Subscription, Observable } from 'rxjs';
   templateUrl: './games-landing.component.html',
   styleUrls: ['./games-landing.component.scss']
 })
-export class GamesLandingComponent implements OnInit, OnDestroy {
-  gamesList: Game[];
-  sub: Subscription;
+export class GamesLandingComponent implements OnInit {
   gamesList$: Observable<Game[]>;
   constructor(private gameApi: GamesService) { }
 
   ngOnInit() {
-    this.sub = this.gameApi.getGameList()
-      .subscribe(data => this.gamesList = data);
-
       this.gamesList$ = this.gameApi.getGameList();
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
   }
 }
