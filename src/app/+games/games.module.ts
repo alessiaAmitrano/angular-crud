@@ -8,7 +8,6 @@ import { GamesRoutingModule } from './games-routing.module';
     CommonModule,
     GamesRoutingModule
   ],
-  declarations: [GamesListComponent],
-  exports: [GamesListComponent]
+  declarations: [GamesListComponent]
 })
 export class GamesModule { }

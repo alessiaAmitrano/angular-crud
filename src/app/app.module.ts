@@ -13,7 +13,6 @@ import { GamesModule } from './+games/games.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GamesModule,
     CoreModule
   ],
   bootstrap: [AppComponent]
