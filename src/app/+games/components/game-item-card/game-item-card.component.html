@@ -1,4 +1,4 @@
-<div class="card col">
+<div class="card col" (click)="cardClicked.emit(gameItem.id)">
   <img class="card-img-top"
        [src]="gameItem.image"
        alt="Card image">
