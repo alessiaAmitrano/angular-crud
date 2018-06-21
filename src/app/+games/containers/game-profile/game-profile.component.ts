@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { Game } from 'core/models/game';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { GamesService } from 'core/services/games.service';
+
+@Component({
+  selector: 'app-game-profile',
+  templateUrl: './game-profile.component.html',
+  styleUrls: ['./game-profile.component.scss']
+})
+export class GameProfileComponent implements OnInit {
+  gameProfile$: Observable<Game>;
+  constructor(
+    private route: ActivatedRoute,
+    private gameApi: GamesService) { }
+
+  ngOnInit() {
+    this.gameProfile$ = this.route.paramMap
+      .pipe(
+        switchMap((params: ParamMap) => this.gameApi.getGameById(params.get('id')))
+      );
+  }
+
+}

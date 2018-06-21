@@ -13,4 +13,8 @@ export class GamesService {
   getGameList(): Observable<Game[]> {
     return this.httpC.get<Game[]>(this.gamesURL);
   }
+
+  getGameById(id: number | string): Observable<Game> {
+    return this.httpC.get<Game>(`${this.gamesURL}/${id}`);
+  }
 }
