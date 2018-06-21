@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { GamesLibraryModule } from './+games/games-library.module';
+import { GamesModule } from './+games/games.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { GamesLibraryModule } from './+games/games-library.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GamesLibraryModule,
+    GamesModule,
     CoreModule
   ],
   bootstrap: [AppComponent]

@@ -4,11 +4,11 @@ import { Game } from 'core/models/game';
 import { Subscription, Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-games-landing',
-  templateUrl: './games-landing.component.html',
-  styleUrls: ['./games-landing.component.scss']
+  selector: 'app-games-list',
+  templateUrl: './games-list.component.html',
+  styleUrls: ['./games-list.component.scss']
 })
-export class GamesLandingComponent implements OnInit {
+export class GamesListComponent implements OnInit {
   gamesList$: Observable<Game[]>;
   constructor(private gameApi: GamesService) { }
 
