@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { GamesListComponent } from './containers/games-list/games-list.component';
 import { GamesRoutingModule } from './games-routing.module';
 import { GameProfileComponent } from './containers/game-profile/game-profile.component';
+import { GameItemCardComponent } from './components/game-item-card/game-item-card.component';
 
 @NgModule({
   imports: [
     CommonModule,
     GamesRoutingModule
   ],
-  declarations: [GamesListComponent, GameProfileComponent]
+  declarations: [GamesListComponent, GameProfileComponent, GameItemCardComponent]
 })
 export class GamesModule { }

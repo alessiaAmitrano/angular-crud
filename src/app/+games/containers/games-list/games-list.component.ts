@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class GamesListComponent implements OnInit {
   gamesList$: Observable<Game[]>;
-  constructor(private gameApi: GamesService, private router: Router) { }
+  constructor(
+    private gameApi: GamesService,
+    private router: Router) { }
 
   ngOnInit() {
     this.gamesList$ = this.gameApi.getGameList();

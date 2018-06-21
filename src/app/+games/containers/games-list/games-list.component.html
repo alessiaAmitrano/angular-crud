@@ -2,19 +2,8 @@
 
 <div class="container">
     <div class="row">
-        <div *ngFor="let game of gamesList$ | async" (click)="goToDetail(game.id)"
-             class="card col col-md-3"
-             style="width:400px">
-            <img class="card-img-top"
-                 [src]="game.image"
-                 alt="Card image">
-            <div class="card-body">
-                <h4 class="card-title">{{game.name}}</h4>
-                <p class="card-text">Id: {{game.id}}</p>
-                <p class="card-text">Year: {{game.year}}</p>
-                <a [routerLink]="['/games', game.id]"
-                   class="btn btn-primary">See Profile</a>
-            </div>
-        </div>
+        <app-game-item-card *ngFor="let game of gamesList$ | async"
+                            [gameItem]="game"
+                            (cardClicked)="goToDetail($event)"></app-game-item-card>
     </div>
 </div>
