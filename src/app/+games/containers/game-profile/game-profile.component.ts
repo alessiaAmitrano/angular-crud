@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Game } from 'core/models/game';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { GamesService } from 'core/services/games.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class GameProfileComponent implements OnInit {
   gameProfile$: Observable<Game>;
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private gameApi: GamesService) { }
 
   ngOnInit() {
@@ -21,6 +22,10 @@ export class GameProfileComponent implements OnInit {
       .pipe(
         switchMap((params: ParamMap) => this.gameApi.getGameById(params.get('id')))
       );
+  }
+
+  goToList() {
+    this.router.navigate(['/games']);
   }
 
 }
