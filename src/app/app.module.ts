@@ -5,12 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { ImgHeightDirective } from './shared/directives/img-height.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ImgHeightDirective
+    AppComponent
     ],
   imports: [
     BrowserModule,

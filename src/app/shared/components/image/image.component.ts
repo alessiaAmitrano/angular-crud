@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ImageComponent implements OnInit {
 @Input() imgUrl: string;
+@Input() customHeight: string;
+@Input() customWidth: string;
 
   constructor() { }
 
