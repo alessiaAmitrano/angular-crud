@@ -1,10 +1,12 @@
-<div class="card col" (click)="cardClicked.emit(gameItem.id)">
+<div class="card col"
+     (click)="cardClicked.emit(gameItem.id)">
   <app-image [imgUrl]="gameItem.image"></app-image>
   <div class="card-body">
     <h4 class="card-title">{{gameItem.name}}</h4>
     <p class="card-text">{{gameItem.id}}</p>
     <p class="card-text">Year: {{gameItem.year}}</p>
-    <a [routerLink]="['/games', gameItem.id]"
-       class="btn btn-primary">See Profile</a>
+    <!-- <a [routerLink]="['/games', gameItem.id]"
+       class="btn btn-primary">See Profile</a> -->
+    <app-button [message]="'See detail'"></app-button>
   </div>
 </div>

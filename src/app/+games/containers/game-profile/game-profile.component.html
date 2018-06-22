@@ -2,7 +2,7 @@
      class="container">
   <div class="row">
     <div class="col-md-6">
-        <app-image [imgUrl]="profile.image"></app-image>
+      <app-image [imgUrl]="profile.image"></app-image>
     </div>
     <div class="col-md-6">
       <h1>{{profile.name}}</h1>
@@ -10,10 +10,10 @@
     </div>
   </div>
   <div class="container">
-    <button class="btn btn-info"
-       (click)="goToList()">Go to list</button>
-       <br>
-    <button class="btn btn-danger"
-       (click)="goBack()">Go back</button>
+    <app-button (buttonClicked)="goToList()"
+                [message]="'Go to list'"></app-button>
+    <br>
+    <app-button (buttonClicked)="goBack()"
+                [message]="'Go back'"></app-button>
   </div>
 </div>
