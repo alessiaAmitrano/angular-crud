@@ -13,6 +13,7 @@ import { Location } from '@angular/common';
 })
 export class GameProfileComponent implements OnInit {
   gameProfile$: Observable<Game>;
+  listBtnClass = 'background-color : "red"';
   constructor(
     private route: ActivatedRoute,
     private router: Router,

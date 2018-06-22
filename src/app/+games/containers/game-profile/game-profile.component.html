@@ -11,9 +11,9 @@
   </div>
   <div class="container">
     <app-button (buttonClicked)="goToList()"
-                [message]="'Go to list'"></app-button>
+                [message]="'Go to list'" [btnClass]="'blueBtn'"></app-button>
     <br>
-    <app-button (buttonClicked)="goBack()"
+    <app-button (buttonClicked)="goBack()" [btnClass]="'redBtn'"
                 [message]="'Go back'"></app-button>
   </div>
 </div>
