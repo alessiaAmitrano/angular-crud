@@ -1,12 +1,13 @@
-<div class="card col" (click)="cardClicked.emit(gameItem.id)">
-  <img class="card-img-top"
-       [src]="gameItem.image"
-       alt="Card image">
+<div class="card col"
+     (click)="cardClicked.emit(gameItem.id)">
+  <app-image [imgUrl]="gameItem.image"></app-image>
   <div class="card-body">
     <h4 class="card-title">{{gameItem.name}}</h4>
     <p class="card-text">{{gameItem.id}}</p>
     <p class="card-text">Year: {{gameItem.year}}</p>
-    <a [routerLink]="['/games', gameItem.id]"
-       class="btn btn-primary">See Profile</a>
+    <!-- <a [routerLink]="['/games', gameItem.id]"
+       class="btn btn-primary">See Profile</a> -->
+    <app-button [message]="'See detail'" [btnClass]="isBtnGreen ? 'greenBtn' : 'blueBtn'"></app-button>
   </div>
 </div>
+<button class="btn btn-warning" (click)="toggleAppBtn()"> Change </button>

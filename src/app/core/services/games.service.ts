@@ -9,12 +9,22 @@ import { HttpClient } from '@angular/common/http';
 export class GamesService {
   gamesURL = 'http://localhost:3000/games';
   constructor(private httpC: HttpClient) { }
+// CRUD
 
+// READ
   getGameList(): Observable<Game[]> {
     return this.httpC.get<Game[]>(this.gamesURL);
   }
-
+// READ
   getGameById(id: number | string): Observable<Game> {
     return this.httpC.get<Game>(`${this.gamesURL}/${id}`);
   }
+
+  // CREATE
+
+
+  // UPDATE
+
+
+  // DELETE
 }
