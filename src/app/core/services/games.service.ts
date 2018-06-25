@@ -32,8 +32,8 @@ export class GamesService {
   }
 
   // CREATE
-  addGame(game: Game): Observable<Game> {
-    return this.httpC.post<Game>(this.gamesURL, game, httpOptions);
+  addGame(game: Game) {
+   return this.httpC.post<Game>(this.gamesURL, game, httpOptions);
 }
   // UPDATE
 

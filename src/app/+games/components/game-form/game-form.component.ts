@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { GamesService } from 'core/services/games.service';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-form',
@@ -7,20 +6,9 @@ import { GamesService } from 'core/services/games.service';
   styleUrls: ['./game-form.component.scss']
 })
 export class GameFormComponent implements OnInit {
-  gameToAdd = {
-    id: 100,
-    name: 'ziggidi',
-    year: '1921',
-    image: 'boh'
-  };
-  gameswhat: any;
-  constructor(private gameApi: GamesService) { }
+@Output()  gameSubmitted = new EventEmitter();
 
   ngOnInit() {
-  }
-
-  addGame() {
-    this.gameswhat = this.gameApi.addGame(this.gameToAdd);
   }
 
 }
