@@ -3,14 +3,13 @@
     <app-image [imgUrl]="gameItem.image"></app-image>
     <div class="card-body">
       <h4 class="card-title">{{gameItem.name}}</h4>
-      <p class="card-text">{{gameItem.id}}</p>
       <p class="card-text">Year: {{gameItem.year}}</p>
-      <!-- <a [routerLink]="['/games', gameItem.id]"
-       class="btn btn-primary">See Profile</a> -->
-      <app-button [message]="'See detail'"
-                  [btnClass]="isBtnGreen ? 'greenBtn' : 'blueBtn'"></app-button>
     </div>
   </div>
-  <button style="margin-left: 20px; margin-bottom: 20px" class="btn btn-warning col-md-5"
+  <app-button [message]="'Edit'"
+              [btnClass]="isBtnGreen ? 'greenBtn' : 'blueBtn'"></app-button>
+  <br>
+  <button style="margin-bottom: 20px"
+          class="btn btn-warning col-md-5"
           (click)="toggleAppBtn()"> Change </button>
 </div>

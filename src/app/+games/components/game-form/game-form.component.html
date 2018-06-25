@@ -1,6 +1,6 @@
 <h3> Add a Game</h3>
 <br>
-<div [formGroup]="newGame" class="container jumbotron text-center">
+<div [formGroup]="gameForm" class="container jumbotron text-center">
   <p>Name :
     <input formControlName="name" class="col-md-6">
   </p>
@@ -11,5 +11,5 @@
     <input formControlName="image" class="col-md-6">
   </p>
   <button class="btn btn-danger"
-          (click)="addGame()">Add</button>
+          (click)="gameSubmitted.emit(gameForm.value)">Add</button>
 </div>

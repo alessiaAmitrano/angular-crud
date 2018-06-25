@@ -9,7 +9,7 @@ import { Game } from 'core/models/game';
 export class GameItemCardComponent implements OnInit {
 @Input() gameItem: Game;
 @Output() cardClicked = new EventEmitter();
-isBtnGreen = false;
+isBtnGreen = true;
 
   constructor() { }
 
