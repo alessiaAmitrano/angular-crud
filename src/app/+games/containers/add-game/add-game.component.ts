@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from 'core/services/games.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Game } from 'core/models/game';
 
 @Component({
   selector: 'app-add-game',
@@ -7,18 +9,12 @@ import { GamesService } from 'core/services/games.service';
   styleUrls: ['./add-game.component.scss']
 })
 export class AddGameComponent implements OnInit {
-  gameToAdd = {
-    id: 180,
-    name: 'ziggidi',
-    year: '1921',
-    image: 'boh'
-  };
-  constructor(private gameApi: GamesService) { }
+  constructor(private gameApi: GamesService) {}
 
   ngOnInit() {
   }
 
-  addGame(game) {
+  addGame(game: Game) {
     event.preventDefault();
     this.gameApi.addGame(game).subscribe(data => console.log(data));
   }
