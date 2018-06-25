@@ -6,13 +6,16 @@ import { GameProfileComponent } from './containers/game-profile/game-profile.com
 import { GameItemCardComponent } from './components/game-item-card/game-item-card.component';
 import { SharedModule } from '../shared/shared.module';
 import { AddGameComponent } from './containers/add-game/add-game.component';
+import { GameFormComponent } from '+games/components/game-form/game-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     GamesRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
-  declarations: [GamesListComponent, GameProfileComponent, GameItemCardComponent, AddGameComponent]
+  declarations: [GamesListComponent, GameProfileComponent, GameItemCardComponent, AddGameComponent, GameFormComponent]
 })
 export class GamesModule { }
