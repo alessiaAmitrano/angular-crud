@@ -7,15 +7,17 @@ import { GameItemCardComponent } from './components/game-item-card/game-item-car
 import { SharedModule } from '../shared/shared.module';
 import { AddGameComponent } from './containers/add-game/add-game.component';
 import { GameFormComponent } from '+games/components/game-form/game-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { EditGameComponent } from './containers/edit-game/edit-game.component';
 
 @NgModule({
   imports: [
     CommonModule,
     GamesRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  declarations: [GamesListComponent, GameProfileComponent, GameItemCardComponent, AddGameComponent, GameFormComponent]
+  declarations: [GamesListComponent, GameProfileComponent, GameItemCardComponent, AddGameComponent, GameFormComponent, EditGameComponent]
 })
 export class GamesModule { }

@@ -7,7 +7,8 @@
     </div>
   </div>
   <app-button [message]="'Edit'"
-              [btnClass]="isBtnGreen ? 'greenBtn' : 'blueBtn'"></app-button>
+              [btnClass]="isBtnGreen ? 'greenBtn' : 'blueBtn'" 
+               (buttonClicked)="goToEditHandler.emit(gameItem)"></app-button>
   <br>
   <button style="margin-bottom: 20px"
           class="btn btn-warning col-md-5"
