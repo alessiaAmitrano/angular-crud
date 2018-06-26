@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Game } from 'core/models/game';
+import { GamesService } from 'core/services/games.service';
 
 @Component({
   selector: 'app-game-form',
@@ -17,10 +18,15 @@ export class GameFormComponent implements OnInit {
     image: ''
   };
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,
+              private gameApi: GamesService) {}
 
   ngOnInit() {
-    this.gameForm = this.formBuilder.group(this.gameItem);
+    if (this.gameApi.gameToEdit) {
+      this.gameForm = this.formBuilder.group(this.gameApi.gameToEdit);
+    } else {
+      this.gameForm = this.formBuilder.group(this.gameItem);
+    }
   }
 
   onSubmitClick(event: Event) {

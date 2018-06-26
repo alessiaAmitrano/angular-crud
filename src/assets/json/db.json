@@ -53,6 +53,12 @@
       "year": "1998",
       "image": "https://upload.wikimedia.org/wikipedia/en/9/91/Spyro_2_-_Ripto%27s_Rage%21_Coverart.png",
       "id": 9
+    },
+    {
+      "name": "tomb raider",
+      "year": "1996",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Tomb_Raider_%281996%29.png/220px-Tomb_Raider_%281996%29.png",
+      "id": 10
     }
   ],
   "films": [

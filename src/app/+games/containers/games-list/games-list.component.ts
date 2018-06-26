@@ -22,4 +22,9 @@ export class GamesListComponent implements OnInit {
   goToDetail(id: number) {
     this.router.navigate(['/games', id]);
   }
+
+  goToEdit(game: Game) {
+    this.router.navigate(['/games/edit', game.id]);
+    this.gameApi.gameToEdit = game;
+  }
 }

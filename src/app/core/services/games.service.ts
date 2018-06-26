@@ -17,7 +17,7 @@ const httpOptions = {
 
 export class GamesService {
   gamesURL = 'http://localhost:3000/games';
-
+  gameToEdit: Game;
   constructor(private httpC: HttpClient) { }
   // ---CRUD--- //
 

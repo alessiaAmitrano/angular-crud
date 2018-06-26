@@ -9,6 +9,7 @@ import { Game } from 'core/models/game';
 export class GameItemCardComponent implements OnInit {
 @Input() gameItem: Game;
 @Output() cardClicked = new EventEmitter();
+@Output() goToEditHandler = new EventEmitter();
 isBtnGreen = true;
 
   constructor() { }
@@ -19,5 +20,4 @@ isBtnGreen = true;
   toggleAppBtn() {
     this.isBtnGreen = !this.isBtnGreen;
   }
-
 }
