@@ -1,15 +1,21 @@
-<h3> Add a Game</h3>
-<br>
-<div [formGroup]="gameForm" class="container jumbotron text-center">
-  <p>Name :
-    <input formControlName="name" class="col-md-6">
-  </p>
-  <p>Year :
-    <input formControlName="year" class="col-md-6">
-  </p>
-  <p>Image :
-    <input formControlName="image" class="col-md-6">
-  </p>
-  <button class="btn btn-danger"
-          (click)="gameSubmitted.emit(gameForm.value)">Add</button>
+<div class="text-center">
+  <h3> Add a Game</h3>
+  <br>
+  <form [formGroup]="gameForm"
+        class="container jumbotron">
+    <p>Name :
+      <input formControlName="name"
+             class="col-md-6">
+    </p>
+    <p>Year :
+      <input formControlName="year"
+             class="col-md-6">
+    </p>
+    <p>Image :
+      <input formControlName="image"
+             class="col-md-6">
+    </p>
+    <button class="btn btn-danger"
+            (click)="gameSubmitted.emit(gameForm.value)">Add</button>
+  </form>
 </div>
