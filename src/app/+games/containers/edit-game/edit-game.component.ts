@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from 'core/models/game';
+import { GamesService } from 'core/services/games.service';
+import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-game',
@@ -7,11 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditGameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gameApi: GamesService,
+              private router: Router) { }
 
   ngOnInit() {
   }
-  onGameEditSubmit() {
-    
+  onGameEditSubmit(game: Game) {
+    event.preventDefault();
+    this.gameApi.editGame(game)
+      .pipe(
+        tap(() => this.router.navigate(['/games']))
+      ).subscribe();
   }
 }

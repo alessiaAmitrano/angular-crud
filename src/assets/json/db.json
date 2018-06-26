@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Dragon s Lair",
-      "year": 1983,
+      "year": "1983",
       "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Dragons_lair.jpg/250px-Dragons_lair.jpg"
     },
     {
@@ -57,7 +57,7 @@
     {
       "name": "tomb raider",
       "year": "1996",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Tomb_Raider_%281996%29.png/220px-Tomb_Raider_%281996%29.png",
+      "image": "https://tpc.googlesyndication.com/simgad/14442698543701917411",
       "id": 10
     }
   ],

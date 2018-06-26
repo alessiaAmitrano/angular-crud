@@ -36,7 +36,9 @@ export class GamesService {
    return this.httpC.post<Game>(this.gamesURL, game, httpOptions);
 }
   // UPDATE
-
+  editGame(game: Game): any {
+    return this.httpC.put(this.gamesURL + '/' + game.id, game);
+  }
 
   // DELETE
 
