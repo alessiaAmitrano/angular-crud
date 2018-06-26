@@ -11,13 +11,20 @@ import { Game } from 'core/models/game';
 export class GameFormComponent implements OnInit {
   @Output() gameSubmitted = new EventEmitter();
   gameForm: FormGroup;
+  gameItem = {
+    name: '',
+    year: '',
+    image: ''
+  };
+
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    this.gameForm = this.formBuilder.group({
-      name: '',
-      year: '',
-      image: ''
-    });
+    this.gameForm = this.formBuilder.group(this.gameItem);
+  }
+
+  onSubmitClick(event: Event) {
+    event.preventDefault();
+    this.gameSubmitted.emit(this.gameForm.value);
   }
 }
