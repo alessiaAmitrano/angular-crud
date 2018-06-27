@@ -57,8 +57,4 @@ export class GamesService {
         catchError(error => throwError(error))
       );
   }
-
-  logError(game: Game) {
-    console.log(game);
-  }
 }
