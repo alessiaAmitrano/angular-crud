@@ -35,4 +35,13 @@ export class GameProfileComponent implements OnInit {
     this.location.back();
   }
 
+  goToEdit(game: Game) {
+    this.router.navigate(['/games/edit', game.id]);
+    this.gameApi.gameToEdit = game;
+  }
+
+  deleteGameWithId(game: Game) {
+    this.gameApi.deleteGame(game);
+    this.router.navigate(['/games']);
+  }
 }

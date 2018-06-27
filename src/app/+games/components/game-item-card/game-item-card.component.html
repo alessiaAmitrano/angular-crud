@@ -6,11 +6,17 @@
       <p class="card-text">Year: {{gameItem.year}}</p>
     </div>
   </div>
-  <app-button [message]="'Edit'"
-              [btnClass]="isBtnGreen ? 'greenBtn' : 'blueBtn'" 
-               (buttonClicked)="goToEditHandler.emit(gameItem)"></app-button>
-  <br>
-  <button style="margin-bottom: 20px"
-          class="btn btn-warning col-md-5"
-          (click)="toggleAppBtn()"> Change </button>
+  <div style="margin-bottom: 20px;">
+    <div class="row">
+      <div class="pull-left col-md-6">
+        <app-button [message]="'Edit'"
+                    [btnClass]="isBtnGreen ? 'greenBtn' : 'blueBtn'"
+                    (buttonClicked)="goToEditHandler.emit(gameItem)"></app-button>
+      </div>
+      <div class="pull-right col-md-6">
+        <app-button [message]="'Toggle'" [btnClass]="'yellowBtn'"
+                (buttonClicked)="toggleAppBtn()"></app-button>
+      </div>
+    </div>
+  </div>
 </div>
