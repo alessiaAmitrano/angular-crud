@@ -41,7 +41,7 @@ export class GameProfileComponent implements OnInit {
   }
 
   deleteGameWithId(game: Game) {
-    this.gameApi.deleteGame(game);
+    this.gameApi.deleteGame(game).subscribe();
     this.router.navigate(['/games']);
   }
 }

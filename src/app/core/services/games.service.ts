@@ -51,7 +51,7 @@ export class GamesService {
 
   // DELETE
   deleteGame(game: Game): any {
-    return this.httpC.delete(`${this.gamesURL}/${game.id}`)
+   return this.httpC.delete(`${this.gamesURL}/${game.id}`)
       .pipe(
         map(success => console.log(success)),
         catchError(error => throwError(error))
