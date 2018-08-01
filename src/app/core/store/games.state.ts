@@ -1,12 +1,12 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { Game } from './../models/game';
-import { AddGame, RemoveGame } from './games.actions';
+import { AddGame, RemoveGame, GetAllGames } from './games.actions';
 
 export class GameStateModel {
     games: Game[];
 }
 
-@State<GameStateModel> ({
+@State<GameStateModel>({
     name: 'Games',
     defaults: {
         games: []
@@ -20,7 +20,7 @@ export class GameState {
     }
 
     @Action(AddGame)
-    add({getState, patchState}: StateContext<GameStateModel>, { payload }: AddGame) {
+    add({ getState, patchState }: StateContext<GameStateModel>, { payload }: AddGame) {
         const state = getState();
         patchState({
             games: [...state.games, payload]
@@ -28,9 +28,16 @@ export class GameState {
     }
 
     @Action(RemoveGame)
-    add({getState, patchState}: StateContext<GameStateModel>, { payload }: RemoveGame) {
+    remove({ getState, patchState }: StateContext<GameStateModel>, { payload }: RemoveGame) {
         patchState({
             games: getState().games.filter(a => a.name !== payload)
+        });
+    }
+
+    @Action(GetAllGames)
+    getAllGames({ getState, patchState }: StateContext<GameStateModel>, { payload }: GetAllGames) {
+        patchState({
+            games: [...payload]
         });
     }
 }

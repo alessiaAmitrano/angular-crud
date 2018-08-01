@@ -9,3 +9,8 @@ export class RemoveGame {
     static readonly type = '[Game] Remove';
     constructor(public payload: string) {}
 }
+
+export class GetAllGames {
+    static readonly type = ' Get all Games';
+    constructor(public payload: Game[]) {}
+}
