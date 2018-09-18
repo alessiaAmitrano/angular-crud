@@ -12,6 +12,7 @@ import { GameState } from './core/store/games.state';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthenticationService } from 'core/authentication/services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgxsLoggerPluginModule.forRoot(),
     BrowserAnimationsModule
   ],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
