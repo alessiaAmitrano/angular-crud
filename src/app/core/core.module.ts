@@ -4,11 +4,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentComponent } from './components/content/content.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthModule } from 'core/authentication/auth.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule
   ],
   declarations: [
     HeaderComponent,
