@@ -1,0 +1,6 @@
+<div class="login-container">
+  <!-- <cms-alert></cms-alert> -->
+  <app-login-form [model]="user"
+                  [isloading]="isloading"
+                  (loginEvent)="loginHandler($event)"></app-login-form>
+</div>
