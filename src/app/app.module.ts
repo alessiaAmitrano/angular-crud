@@ -11,6 +11,7 @@ import { NgxsModule } from '@ngxs/store';
 import { GameState } from './core/store/games.state';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
       GameState
     ]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    NgxsLoggerPluginModule.forRoot()
+    NgxsLoggerPluginModule.forRoot(),
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })
