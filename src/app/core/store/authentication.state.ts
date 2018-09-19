@@ -1,6 +1,6 @@
 import { State, Selector, Action, StateContext } from '@ngxs/store';
 import { AuthenticationService } from 'core/authentication/services/authentication.service';
-import { Login } from 'core/store/authentication.actions';
+import { Login, Logout } from 'core/store/authentication.actions';
 import { tap } from 'rxjs/operators';
 
 export class AuthStateModel {
@@ -10,7 +10,7 @@ export class AuthStateModel {
 }
 
 @State<AuthStateModel>({
-    name: 'auth'
+    name: 'authentication',
 })
 
 export class AuthState {
@@ -27,5 +27,17 @@ export class AuthState {
             username: username,
             password: password
         });
+    }
+
+    @Action(Logout)
+    logout({ setState, getState }: StateContext<AuthStateModel>) {
+      const { token } = getState();
+      return this.authService.logout().pipe(tap(() => {
+        setState({
+            token: '',
+            username: '',
+            password: ''
+        });
+      }));
     }
 }

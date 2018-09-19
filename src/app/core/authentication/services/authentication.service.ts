@@ -20,6 +20,7 @@ export class AuthenticationService {
 
   public logout() {
     localStorage.removeItem('currentUser');
+    return localStorage;
   }
 
   public get currentUser() {

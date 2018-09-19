@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.isloading = event[0];
     this.user = event[1];
     this.authenticationService
-      .login(this.user.username, this.user.password)
+      .login(this.user.user, this.user.password)
       .subscribe(
         data => {
           const client: User = data;

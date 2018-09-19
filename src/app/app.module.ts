@@ -14,6 +14,7 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthenticationService } from 'core/authentication/services/authentication.service';
 import { BackendInterceptor } from 'core/authentication/services/interceptor.service';
+import { AuthState } from 'core/store/authentication.state';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BackendInterceptor } from 'core/authentication/services/interceptor.ser
     CoreModule,
     SharedModule,
     NgxsModule.forRoot([
-      GameState
+      GameState,
+      AuthState
     ]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
