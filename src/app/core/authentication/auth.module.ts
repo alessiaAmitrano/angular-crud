@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './containers/login/login.component';
 import { LoginFormComponent } from 'core/authentication/components/login-form/login-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 
@@ -10,6 +10,7 @@ import { CdkTableModule } from '@angular/cdk/table';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     CdkTableModule
   ],

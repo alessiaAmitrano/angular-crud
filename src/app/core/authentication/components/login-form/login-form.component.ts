@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,11 +6,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss']
 })
-export class LoginFormComponent {
-  @Input() public model;
+export class LoginFormComponent implements OnInit {
   @Input() public isloading;
-  @Output() public loginEvent: EventEmitter<any> = new EventEmitter<any>();
-
+  @Output() loginEvent = new EventEmitter();
   userForm: FormGroup;
   userItem = {
     user: '',
@@ -19,8 +17,14 @@ export class LoginFormComponent {
 
   constructor(private formBuilder: FormBuilder) {}
 
-  public login() {
+  ngOnInit() {
+      this.userForm = this.formBuilder.group(this.userItem);
+  }
+
+  onLoginBtnClick(event: Event) {
+    event.preventDefault();
     this.isloading = true;
-    this.loginEvent.emit([this.isloading, this.model]);
+    this.loginEvent.emit([this.isloading, this.userForm.value]);
+    console.log('form', this.userForm.value);
   }
 }
