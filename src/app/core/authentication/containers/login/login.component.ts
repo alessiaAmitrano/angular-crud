@@ -4,6 +4,7 @@ import { User } from 'core/authentication/models/user';
 import { AuthenticationService } from 'core/authentication/services/authentication.service';
 import { Store } from '@ngxs/store';
 import { Login } from 'core/store/authentication.actions';
+import { AlertService } from 'core/authentication/services/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -18,8 +19,8 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthenticationService,
-    private store: Store
-    // private alertService: AlertService
+    private store: Store,
+    private alertService: AlertService
     ) { }
 
   public ngOnInit() {
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
         },
         error => {
           console.log(error);
-          // this.alertService.error(error);
+          this.alertService.error(error);
           this.isloading = false;
         });
   }

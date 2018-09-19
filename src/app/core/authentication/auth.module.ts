@@ -9,6 +9,8 @@ import { AuthenticationService } from 'core/authentication/services/authenticati
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BackendProvider, BackendInterceptor } from 'core/authentication/services/interceptor.service';
 import { JwtInterceptor } from 'core/authentication/services/jwt.interceptor';
+import { AlertComponent } from './components/alert/alert.component';
+import { AlertService } from 'core/authentication/services/alert.service';
 
 @NgModule({
   imports: [
@@ -18,11 +20,11 @@ import { JwtInterceptor } from 'core/authentication/services/jwt.interceptor';
     MatFormFieldModule,
     CdkTableModule
   ],
-  declarations: [LoginComponent, LoginFormComponent],
+  declarations: [LoginComponent, LoginFormComponent, AlertComponent],
   providers: [
     // AuthGuard,
     AuthenticationService,
-    // AlertService,
+    AlertService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: JwtInterceptor,
