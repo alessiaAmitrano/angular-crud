@@ -11,6 +11,7 @@ import { BackendProvider, BackendInterceptor } from 'core/authentication/service
 import { JwtInterceptor } from 'core/authentication/services/jwt.interceptor';
 import { AlertComponent } from './components/alert/alert.component';
 import { AlertService } from 'core/authentication/services/alert.service';
+import { AuthGuard } from 'core/authentication/guards/auth.guard';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { AlertService } from 'core/authentication/services/alert.service';
   ],
   declarations: [LoginComponent, LoginFormComponent, AlertComponent],
   providers: [
-    // AuthGuard,
+    AuthGuard,
     AuthenticationService,
     AlertService,
     {
