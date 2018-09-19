@@ -7,8 +7,8 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) { }
 
-  public login(userData: any) {
-    return this.http.post<any>('/api/authenticate', userData).pipe(
+  public login(username: string, password: string) {
+    return this.http.post<any>('/api/authenticate',  { username, password }).pipe(
       map(user => {
         if (user && user.token) {
           localStorage.setItem('currentUser', JSON.stringify(user));

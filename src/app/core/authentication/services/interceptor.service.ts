@@ -54,7 +54,7 @@ export let BackendProvider = {
 
 const USERS = [
   {
-    username: 'holition',
-    password: '341200',
+    username: 'user',
+    password: '0000',
   }
 ];
