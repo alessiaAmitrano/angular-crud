@@ -13,6 +13,7 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthenticationService } from 'core/authentication/services/authentication.service';
+import { BackendInterceptor } from 'core/authentication/services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AuthenticationService } from 'core/authentication/services/authenticati
     NgxsLoggerPluginModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService, BackendInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

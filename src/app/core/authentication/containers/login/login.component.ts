@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'core/authentication/models/user';
 import { AuthenticationService } from 'core/authentication/services/authentication.service';
+import { Store } from '@ngxs/store';
+import { Login } from 'core/store/authentication.actions';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +18,7 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthenticationService,
+    private store: Store
     // private alertService: AlertService
     ) { }
 
@@ -27,10 +30,11 @@ export class LoginComponent implements OnInit {
     this.isloading = event[0];
     this.user = event[1];
     this.authenticationService
-      .login(this.user.username, this.user.password)
+      .login(this.user)
       .subscribe(
         data => {
           const client: User = data;
+          this.store.dispatch(new Login(client));
           this.router.navigate(['games/add']);
         },
         error => {
