@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'core/authentication/models/user';
 import { AuthenticationService } from 'core/authentication/services/authentication.service';
 import { Store } from '@ngxs/store';
-import { Login } from 'core/store/authentication.actions';
+import { Login } from 'core/authentication/store/authentication.actions';
 import { AlertService } from 'core/authentication/services/alert.service';
 
 @Component({
