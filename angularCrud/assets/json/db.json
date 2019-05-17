@@ -1,0 +1,96 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Dragon s Lair",
+      "year": "1983",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Dragons_lair.jpg/250px-Dragons_lair.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Galaga",
+      "year": 1981,
+      "image": "https://i.pinimg.com/236x/f7/0f/14/f70f1409fb710984d86a2ac495fde118--nes-collection-games-box.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Super Mario",
+      "year": 1986,
+      "image": "https://cdn-images-1.medium.com/max/1600/0*UQ3qf_cT8gsJWmgl.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ghosts n Goblins",
+      "year": 1985,
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/GhostsnGoblins_flyer.jpg/220px-GhostsnGoblins_flyer.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Pacman",
+      "year": "1980",
+      "image": "https://shop.line-scdn.net/themeshop/v1/products/9a/e0/56/9ae0561f-3bc8-4851-81ed-a8d3c05419f6/38/WEBSTORE/icon_198x278.png?__=20161019"
+    },
+    {
+      "id": 6,
+      "name": "Tetris",
+      "year": "1984",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/NES_Tetris_Box_Front.jpg/220px-NES_Tetris_Box_Front.jpg"
+    },
+    {
+      "name": "Sonic ",
+      "year": "1991",
+      "image": "http://trade.abyssecorp.com/3042-home_default/sonic-poster-sonic-jump-98x68.jpg",
+      "id": 7
+    },
+    {
+      "name": "Crash Bandicoot",
+      "year": "1996",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyNK5vBDd3brgA5_C9aaR-GSzXRRrlWN4D1mGHibwVK3ujc4PP",
+      "id": 8
+    },
+    {
+      "name": "Spyro the Dragon",
+      "year": "1998",
+      "image": "https://upload.wikimedia.org/wikipedia/en/9/91/Spyro_2_-_Ripto%27s_Rage%21_Coverart.png",
+      "id": 9
+    }
+  ],
+  "films": [
+    {
+      "id": 1,
+      "name": "Avatar",
+      "year": 2009,
+      "image": "http://t0.gstatic.com/images?q=tbn:ANd9GcQCfmvrE4fMo2cd8esc7mDZPtFSJThAujddMPkRtti1_ij6u-jp"
+    },
+    {
+      "id": 2,
+      "name": "Ready Player One",
+      "year": 2018,
+      "image": "https://static.wixstatic.com/media/4e9709_90bf8afc82984fa9b9ea06cae6a5a54b~mv2.jpg/v1/fill/w_320,h_474/4e9709_90bf8afc82984fa9b9ea06cae6a5a54b~mv2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Tron: Legacy",
+      "year": 2010,
+      "image": "http://t1.gstatic.com/images?q=tbn:ANd9GcSchLICLsn0n_GlVBYmaIZjwcYDuqvb1fg4nVvr8WAh3FN8EqfY"
+    },
+    {
+      "id": 4,
+      "name": "Tron",
+      "year": 1982,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7XOgZVlpE-TZV0o0P6sjMFCQ0r4wQ1dcOkeBJcbhBpNamaDem"
+    },
+    {
+      "id": 5,
+      "name": "Back to the Future",
+      "year": "1985",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Back_to_the_Future.jpg/220px-Back_to_the_Future.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Star Wars: the force awakens",
+      "year": "1984",
+      "image": "https://a.ltrbxd.com/resized/sm/upload/t1/n6/d1/k6/g2mqdMU3jaz6uEosF5aqJgbw7e9-0-230-0-345-crop.jpg?k=79683d9a09"
+    }
+  ]
+}
